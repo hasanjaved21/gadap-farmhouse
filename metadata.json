@@ -1,0 +1,6 @@
+{
+  "name": "Gadap Farmhouses",
+  "description": "Luxury Farmhouse & Event Venue Booking in Gadap Town, Malir, Karachi. Crafting Golden Moments.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
