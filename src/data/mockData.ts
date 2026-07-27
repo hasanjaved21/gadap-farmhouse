@@ -616,6 +616,62 @@ export const PACKAGES_DATA: Package[] = [
 
 export const GALLERY_DATA: GalleryItem[] = [
   {
+    id: 'gal-amenity-1',
+    title: 'Filtered Swimming Pools & Waterfalls',
+    category: 'Swimming Pool',
+    imageUrl: 'https://scontent.fkhi2-3.fna.fbcdn.net/v/t39.30808-6/731366317_122185235084873533_954250061520681854_n.jpg?stp=dst-jpg_tt6&cstp=mx1200x1600&ctp=s1200x1600&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=7gBr3Q4zt-0Q7kNvwGZtICT&_nc_oc=AdqjIp2cHtyhbswEYATDVtGtChOipcMzfPhu0_GbdPJTkWKBJnBsVQCYU9v5FEU5XNl-bWrNQw0rRlRl0KwVFcdr&_nc_zt=23&_nc_ht=scontent.fkhi2-3.fna&_nc_gid=9MJ182IROdSpz02B5G_h6w&_nc_ss=7b2a8&oh=00_AQCTF7lh9AgRLdQMzomeeuaWLqL8AjPnBabjx_ZtYnNEdQ&oe=6A6D3C00',
+    caption: 'Adult deep-end pool & shallow splash pools with continuous water filtration and cascading waterfalls.',
+    farmhouseName: 'Gadap Farmhouses'
+  },
+  {
+    id: 'gal-amenity-2',
+    title: 'Floodlit Turf Cricket Pitch & Sports Turf',
+    category: 'Sports Activities',
+    imageUrl: 'https://scontent.fkhi11-2.fna.fbcdn.net/v/t39.30808-6/749315193_122188669226873533_785521168422915001_n.jpg?stp=dst-jpg_tt6&cstp=mx1600x1200&ctp=s1600x1200&_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=LV2LLdbvJvAQ7kNvwFxkMwU&_nc_oc=AdppGEMNEtz_fFVePJyOqr5HGTVJ1R_spJowJ7wy6OUZ1X-ZqSOO0vCCHVOPvkBehz90lyR9syNUvvba7nWOT1HD&_nc_zt=23&_nc_ht=scontent.fkhi11-2.fna&_nc_gid=T7ri_NAwDsh7qkdg86r_Lw&_nc_ss=7b2a8&oh=00_AQCfu7gE6ZvLVzSLwQ6HviLhrPFpF9Xo3GVKbsE-OF0O8w&oe=6A6D410B',
+    caption: 'Full-length turf cricket pitch equipped with high-power LED floodlights for night matches.',
+    farmhouseName: 'Gadap Farmhouses'
+  },
+  {
+    id: 'gal-amenity-3',
+    title: 'Indoor Gaming Lounge',
+    category: 'Indoor Games',
+    imageUrl: 'https://lh3.googleusercontent.com/d/1LP3fy-fupaDEJBer5t8yjRWFl4xLgU04',
+    caption: 'Spacious indoor gaming lounge featuring full-size snooker tables, foosball, table tennis, and carrom.',
+    farmhouseName: 'Gadap Farmhouses'
+  },
+  {
+    id: 'gal-amenity-4',
+    title: 'Executive Bedrooms & Suites',
+    category: 'Rooms',
+    imageUrl: 'https://scontent.fkhi2-2.fna.fbcdn.net/v/t39.30808-6/753241586_122188669688873533_5485373068986998170_n.jpg?stp=dst-jpg_tt6&cstp=mx1600x1200&ctp=s1600x1200&_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=1htThUruZsoQ7kNvwGGRrBD&_nc_oc=Adqp6vwgfMSsJFsTXFCRNMxJsJxvH-gVDfgHnfmDDf7arNRYZDbmwC2hKzozaHkMzkDBUMJObkJhYHztBovJf7b6&_nc_zt=23&_nc_ht=scontent.fkhi2-2.fna&_nc_gid=it9OKhO5oSDoeyKFrRhjeA&_nc_ss=7b2a8&oh=00_AQAPgdPW_fneGoNaMcPR7ti6gbmrDGxGkFgU3DjMAH1Rrg&oe=6A6D5B55',
+    caption: 'Master bedrooms with attached modern washrooms, clean fresh bedding, vanity mirrors, and comfortable seating.',
+    farmhouseName: 'Gadap Farmhouses'
+  },
+  {
+    id: 'gal-amenity-5',
+    title: 'Built-in Live BBQ Pits & Dining Gazebos',
+    category: 'BBQ Area',
+    imageUrl: 'https://lh3.googleusercontent.com/d/1mHdR0SPca5hLzn0rRoUuDCRSP0D6PrsD',
+    caption: 'Built-in brick charcoal BBQ grills, skewers, preparation counters, and shaded outdoor dining gazebos.',
+    farmhouseName: 'Gadap Farmhouses'
+  },
+  {
+    id: 'gal-amenity-6',
+    title: 'Expansive Lush Lawns & Event Grounds',
+    category: 'Gardens',
+    imageUrl: 'https://scontent.fkhi2-3.fna.fbcdn.net/v/t39.30808-6/753503103_122188670018873533_196524260830104006_n.jpg?stp=dst-jpg_tt6&cstp=mx1600x1200&ctp=s1600x1200&_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=pEjH5_Y-hVoQ7kNvwEHv7D4&_nc_oc=Adr0H92iq6Dd6xPeqal_C4dVvD8yphjp0Krv6Ho18d7AQBfPI-xK6uiRAtC7u8vife8&_nc_zt=23&_nc_ht=scontent.fkhi2-3.fna&_nc_gid=NKyUxvHjSOEbdP-TMSwPVg&_nc_ss=7b2a8&oh=00_AQDfpRjTlOmSkDKBq-jeGIExnX_c5Kicbb1ry7Jj0G8BNw&oe=6A6D3346',
+    caption: 'Immaculately manicured green grounds surrounded by tall date palm trees and ambient lighting for events.',
+    farmhouseName: 'Gadap Farmhouses'
+  },
+  {
+    id: 'gal-amenity-7',
+    title: 'Kids Splash Slides & Family Play Zone',
+    category: 'Swimming Pool',
+    imageUrl: 'https://scontent.fkhi2-3.fna.fbcdn.net/v/t39.30808-6/752807453_122188670306873533_4165723509216842957_n.jpg?stp=dst-jpg_tt6&cstp=mx1280x960&ctp=s1280x960&_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=-9TUGoAGLfAQ7kNvwHCwRor&_nc_oc=AdoYOfPHZiAa5K9GnaqVzB-jkDo7xgyI5KMHpZJBVkMsPJhaQvaOsDz1frDu2K9BH68&_nc_zt=23&_nc_ht=scontent.fkhi2-3.fna&_nc_gid=D2Gs1QfG4oJQhvjiJt1wMg&_nc_ss=7b2a8&oh=00_AQD1up4JvsxAaxA87ahkzhqia3vg97p3ZU2JjdH-l5EECA&oe=6A6D7CDD',
+    caption: 'Safe water slides, shallow splash pools, garden swings, and fully enclosed boundary walls.',
+    farmhouseName: 'Gadap Farmhouses'
+  },
+  {
     id: 'gal-1',
     title: 'Illuminated Night Pool Deck',
     category: 'Swimming Pool',
@@ -624,36 +680,12 @@ export const GALLERY_DATA: GalleryItem[] = [
     farmhouseName: 'Royal Palms Grand Estate'
   },
   {
-    id: 'gal-2',
-    title: 'Luxury Villa Exterior',
-    category: 'Farmhouses',
-    imageUrl: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=80',
-    caption: 'Modern luxury architectural facade surrounded by date palms.',
-    farmhouseName: 'Al-Ghaffar Oasis Resort'
-  },
-  {
     id: 'gal-3',
     title: 'Manicured Event Lawn',
     category: 'Gardens',
     imageUrl: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1200&q=80',
     caption: 'Lush green velvet grass ideal for outdoor weddings and sports.',
     farmhouseName: 'Paradise Cove Event Estate'
-  },
-  {
-    id: 'gal-4',
-    title: 'Executive Air-Conditioned Suite',
-    category: 'Rooms',
-    imageUrl: 'https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1200&q=80',
-    caption: 'Plush bedding and tranquil pool views from master bedrooms.',
-    farmhouseName: 'Emerald Haven Farmhouse'
-  },
-  {
-    id: 'gal-5',
-    title: 'Sizzling BBQ Grill Setup',
-    category: 'BBQ Area',
-    imageUrl: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80',
-    caption: 'Brick charcoal BBQ setup for live kabab and tikka grilling.',
-    farmhouseName: 'Al-Ghaffar Oasis Resort'
   },
   {
     id: 'gal-6',
@@ -686,22 +718,6 @@ export const GALLERY_DATA: GalleryItem[] = [
     imageUrl: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80',
     caption: 'Under-the-stars seating arrangements surrounded by nature.',
     farmhouseName: 'Palm Riviera Luxury Villa'
-  },
-  {
-    id: 'gal-10',
-    title: 'Floodlit Cricket Pitch Match',
-    category: 'Sports Activities',
-    imageUrl: 'https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=1200&q=80',
-    caption: 'Night cricket tournament pitch with high intensity floodlights.',
-    farmhouseName: 'Al-Ghaffar Oasis Resort'
-  },
-  {
-    id: 'gal-11',
-    title: 'Aerial View of Resort Estate',
-    category: 'Drone Shots',
-    imageUrl: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80',
-    caption: 'Birdseye drone view showcasing pool, lawns, and private boundary walls.',
-    farmhouseName: 'Royal Palms Grand Estate'
   }
 ];
 

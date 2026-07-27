@@ -23,7 +23,10 @@ import {
   Heart,
   MessageSquare,
   Quote,
-  Bot
+  Bot,
+  Gamepad2,
+  BedDouble,
+  Zap
 } from 'lucide-react';
 import { FARMHOUSES_DATA, REVIEWS_DATA, EVENTS_DATA, BRAND_INFO } from '../data/mockData';
 import { Farmhouse } from '../types';
@@ -146,7 +149,7 @@ export const HomePage: React.FC<HomePageProps> = ({
 
   const heroSlides = [
     {
-      image: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1920&q=80',
+      image: 'https://scontent.fkhi2-2.fna.fbcdn.net/v/t39.30808-6/753361657_122188669130873533_4792060991179590151_n.jpg?stp=dst-jpg_tt6&cstp=mx1600x1200&ctp=s1600x1200&_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=9wB4C-iuDhMQ7kNvwEjyUME&_nc_oc=AdqBKEkIa82CZ7HFXRI11hV3vJ8pVoASf7-2pq3KBlkb-rsEmUbl7h-PyCRpLF4J6RA&_nc_zt=23&_nc_ht=scontent.fkhi2-2.fna&_nc_gid=TOWYmDFKJMHndBBMckMlTw&_nc_ss=7b2a8&oh=00_AQDtGy3_s6FGo4cKHvUogkoK-layOd5cUZx_w-_yHHXdNQ&oe=6A6D4A21',
       tag: '5-Star Resort Hospitality',
       heading: 'Escape the City. Experience Nature.',
       subheading: 'Book premium farmhouses in Gadap Town for birthdays, family gatherings, weddings, BBQ nights, corporate events, and unforgettable celebrations.'
@@ -181,6 +184,65 @@ export const HomePage: React.FC<HomePageProps> = ({
     return true;
   });
 
+  const amenitiesList = [
+    {
+      id: 'pools',
+      title: 'Filtered Swimming Pools & Waterfalls',
+      badge: 'Continuous Filtration',
+      description: 'Adult deep-end pools & shallow splash pools for toddlers with continuous water filtration, cascading waterfalls, and night LED lighting.',
+      image: 'https://scontent.fkhi2-3.fna.fbcdn.net/v/t39.30808-6/731366317_122185235084873533_954250061520681854_n.jpg?stp=dst-jpg_tt6&cstp=mx1200x1600&ctp=s1200x1600&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=7gBr3Q4zt-0Q7kNvwGZtICT&_nc_oc=AdqjIp2cHtyhbswEYATDVtGtChOipcMzfPhu0_GbdPJTkWKBJnBsVQCYU9v5FEU5XNl-bWrNQw0rRlRl0KwVFcdr&_nc_zt=23&_nc_ht=scontent.fkhi2-3.fna&_nc_gid=9MJ182IROdSpz02B5G_h6w&_nc_ss=7b2a8&oh=00_AQCTF7lh9AgRLdQMzomeeuaWLqL8AjPnBabjx_ZtYnNEdQ&oe=6A6D3C00',
+      icon: Waves
+    },
+    {
+      id: 'cricket',
+      title: 'Floodlit Turf Cricket Pitch & Sports Turf',
+      badge: 'Night Tournaments',
+      description: 'Full-length turf cricket pitches equipped with high-power LED floodlights for night matches, football, and team tournaments.',
+      image: 'https://scontent.fkhi11-2.fna.fbcdn.net/v/t39.30808-6/749315193_122188669226873533_785521168422915001_n.jpg?stp=dst-jpg_tt6&cstp=mx1600x1200&ctp=s1600x1200&_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=LV2LLdbvJvAQ7kNvwFxkMwU&_nc_oc=AdppGEMNEtz_fFVePJyOqr5HGTVJ1R_spJowJ7wy6OUZ1X-ZqSOO0vCCHVOPvkBehz90lyR9syNUvvba7nWOT1HD&_nc_zt=23&_nc_ht=scontent.fkhi11-2.fna&_nc_gid=T7ri_NAwDsh7qkdg86r_Lw&_nc_ss=7b2a8&oh=00_AQCfu7gE6ZvLVzSLwQ6HviLhrPFpF9Xo3GVKbsE-OF0O8w&oe=6A6D410B',
+      icon: Trophy
+    },
+    {
+      id: 'gaming',
+      title: 'Indoor Gaming Lounge',
+      badge: 'Snooker & Indoor Games',
+      description: 'Escape into spacious indoor gaming lounges featuring full-size snooker tables, foosball, table tennis, and carrom.',
+      image: 'https://lh3.googleusercontent.com/d/1LP3fy-fupaDEJBer5t8yjRWFl4xLgU04',
+      icon: Gamepad2
+    },
+    {
+      id: 'bedrooms',
+      title: 'Executive Bedrooms & Suites',
+      badge: 'Luxury Overnight Stay',
+      description: 'Master bedrooms with attached modern washrooms, clean fresh bedding, vanity mirrors, and comfortable seating.',
+      image: 'https://scontent.fkhi2-2.fna.fbcdn.net/v/t39.30808-6/753241586_122188669688873533_5485373068986998170_n.jpg?stp=dst-jpg_tt6&cstp=mx1600x1200&ctp=s1600x1200&_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=1htThUruZsoQ7kNvwGGRrBD&_nc_oc=Adqp6vwgfMSsJFsTXFCRNMxJsJxvH-gVDfgHnfmDDf7arNRYZDbmwC2hKzozaHkMzkDBUMJObkJhYHztBovJf7b6&_nc_zt=23&_nc_ht=scontent.fkhi2-2.fna&_nc_gid=it9OKhO5oSDoeyKFrRhjeA&_nc_ss=7b2a8&oh=00_AQAPgdPW_fneGoNaMcPR7ti6gbmrDGxGkFgU3DjMAH1Rrg&oe=6A6D5B55',
+      icon: BedDouble
+    },
+    {
+      id: 'bbq',
+      title: 'Built-in Live BBQ Pits & Dining Gazebos',
+      badge: 'Live Grill Setup',
+      description: 'Built-in brick charcoal BBQ grills, skewers, preparation counters, and shaded outdoor dining gazebos under ambient garden string lights.',
+      image: 'https://lh3.googleusercontent.com/d/1mHdR0SPca5hLzn0rRoUuDCRSP0D6PrsD',
+      icon: Flame
+    },
+    {
+      id: 'lawns',
+      title: 'Expansive Lush Lawns & Event Grounds',
+      badge: 'Up to 500+ Capacity',
+      description: 'Immaculately manicured green grounds surrounded by tall date palm trees, flower beds, and romantic string lighting for grand events.',
+      image: 'https://scontent.fkhi2-3.fna.fbcdn.net/v/t39.30808-6/753503103_122188670018873533_196524260830104006_n.jpg?stp=dst-jpg_tt6&cstp=mx1600x1200&ctp=s1600x1200&_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=pEjH5_Y-hVoQ7kNvwEHv7D4&_nc_oc=Adr0H92iq6Dd6xPeqal_C4dVvD8yphjp0Krv6Ho18d7AQBfPI-xK6uiRAtC7u8vife8&_nc_zt=23&_nc_ht=scontent.fkhi2-3.fna&_nc_gid=NKyUxvHjSOEbdP-TMSwPVg&_nc_ss=7b2a8&oh=00_AQDfpRjTlOmSkDKBq-jeGIExnX_c5Kicbb1ry7Jj0G8BNw&oe=6A6D3346',
+      icon: Trees
+    },
+    {
+      id: 'kids',
+      title: 'Kids Splash Slides & Family Play Zone',
+      badge: 'Family Safe & Private',
+      description: 'Safe water slides, shallow splash pools, garden swings, and fully enclosed boundary walls ensuring 100% privacy for families.',
+      image: 'https://scontent.fkhi2-3.fna.fbcdn.net/v/t39.30808-6/752807453_122188670306873533_4165723509216842957_n.jpg?stp=dst-jpg_tt6&cstp=mx1280x960&ctp=s1280x960&_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=-9TUGoAGLfAQ7kNvwHCwRor&_nc_oc=AdoYOfPHZiAa5K9GnaqVzB-jkDo7xgyI5KMHpZJBVkMsPJhaQvaOsDz1frDu2K9BH68&_nc_zt=23&_nc_ht=scontent.fkhi2-3.fna&_nc_gid=D2Gs1QfG4oJQhvjiJt1wMg&_nc_ss=7b2a8&oh=00_AQD1up4JvsxAaxA87ahkzhqia3vg97p3ZU2JjdH-l5EECA&oe=6A6D7CDD',
+      icon: Smile
+    }
+  ];
+
   return (
     <div className="space-y-20 pb-16 font-sans">
       {/* 1. HERO SECTION */}
@@ -193,8 +255,8 @@ export const HomePage: React.FC<HomePageProps> = ({
             referrerPolicy="no-referrer"
             className="w-full h-full object-cover transition-all duration-1000 scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/70 to-neutral-950/40"></div>
-          <div className="absolute inset-0 bg-radial from-transparent via-neutral-950/30 to-neutral-950/90"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/85 via-neutral-950/30 to-black/15"></div>
+          <div className="absolute inset-0 bg-radial from-transparent via-transparent to-neutral-950/50"></div>
         </div>
 
         {/* Hero Content */}
@@ -340,140 +402,68 @@ export const HomePage: React.FC<HomePageProps> = ({
         </div>
       </section>
 
-      {/* 4. FEATURED FARMHOUSE COLLECTION */}
+      {/* 4. OUR AMENITIES */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
-          <div>
-            <span className="text-xs font-bold text-red-600 uppercase tracking-widest block mb-1">
-              Handpicked Luxury Estates
-            </span>
-            <h2 className={`font-serif font-bold text-3xl sm:text-4xl ${darkMode ? 'text-white' : 'text-slate-900'}`}>
-              Featured Farmhouse Collection
-            </h2>
-            <p className="text-sm text-slate-600 mt-1">
-              Every venue is equipped with a swimming pool, generator backup, and lush green lawns.
-            </p>
-          </div>
-
-          {/* Filter Tabs */}
-          <div className={`flex items-center space-x-2 ${darkMode ? 'bg-neutral-900 border-neutral-800' : 'bg-white border-red-200 shadow-sm'} p-1.5 rounded-2xl border`}>
-            {[
-              { id: 'all', label: 'All Venues' },
-              { id: 'large', label: '100+ Guest Venues' },
-              { id: 'pools', label: 'Kids Pool Included' }
-            ].map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => setActiveCategoryFilter(tab.id as any)}
-                className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all ${
-                  activeCategoryFilter === tab.id
-                    ? 'bg-red-600 text-white font-bold shadow-md shadow-red-600/20'
-                    : darkMode ? 'text-neutral-400 hover:text-white' : 'text-slate-600 hover:text-red-600'
-                }`}
-              >
-                {tab.label}
-              </button>
-            ))}
-          </div>
+        <div className="text-center space-y-3">
+          <span className="text-xs font-bold text-red-700 uppercase tracking-widest px-3.5 py-1.5 rounded-full bg-red-100 border border-red-200">
+            Resort-Style Comforts
+          </span>
+          <h2 className={`font-serif font-bold text-3xl sm:text-4xl ${darkMode ? 'text-white' : 'text-slate-900'}`}>
+            Our Amenities
+          </h2>
+          <p className="text-sm text-slate-600 max-w-2xl mx-auto">
+            Every Gadap Town farmhouse is curated with premier resort amenities designed for maximum luxury, comfort, and entertainment for all age groups.
+          </p>
         </div>
 
-        {/* Farmhouse Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredFarmhouses.map((farm) => (
-            <div
-              key={farm.id}
-              className={`rounded-3xl ${darkMode ? 'bg-neutral-900 border-neutral-800 hover:border-red-500/40' : 'bg-white border-red-100 hover:border-red-400 hover:shadow-2xl hover:shadow-red-600/10'} overflow-hidden shadow-xl transition-all duration-300 group flex flex-col justify-between`}
-            >
-              <div>
-                {/* Image & Badge Overlay */}
-                <div className="relative h-64 overflow-hidden">
-                  <img
-                    src={farm.heroImage}
-                    alt={farm.name}
-                    referrerPolicy="no-referrer"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+        {/* Amenities Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {amenitiesList.map((item) => {
+            const IconComponent = item.icon;
+            return (
+              <div
+                key={item.id}
+                className={`rounded-3xl ${
+                  darkMode
+                    ? 'bg-neutral-900 border-neutral-800 hover:border-red-500/50'
+                    : 'bg-white border-red-100 hover:border-red-400 hover:shadow-2xl hover:shadow-red-600/10'
+                } border overflow-hidden shadow-xl transition-all duration-300 group flex flex-col justify-between`}
+              >
+                <div>
+                  {/* Card Header Image */}
+                  <div className="relative h-52 overflow-hidden">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      referrerPolicy="no-referrer"
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent"></div>
 
-                  <span className="absolute top-4 left-4 bg-red-600/95 backdrop-blur-md text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-md">
-                    ⭐ {farm.rating} ({farm.reviewCount} Reviews)
-                  </span>
+                    {/* Badge */}
+                    <span className="absolute top-3 right-3 bg-red-600/95 backdrop-blur-md text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-md">
+                      {item.badge}
+                    </span>
 
-                  <span className="absolute top-4 right-4 bg-slate-900/90 backdrop-blur-md text-white text-[11px] font-semibold px-3 py-1 rounded-full border border-slate-700">
-                    Cap: {farm.capacity} Guests
-                  </span>
+                    {/* Icon floating */}
+                    <div className="absolute bottom-3 left-4 w-10 h-10 rounded-xl bg-white/20 backdrop-blur-md text-white border border-white/30 flex items-center justify-center shadow-lg">
+                      <IconComponent className="w-5 h-5 text-amber-300" />
+                    </div>
+                  </div>
 
-                  <div className="absolute bottom-3 left-4 right-4">
-                    <h3 className="font-serif font-bold text-xl text-white drop-shadow-md">
-                      {farm.name}
+                  {/* Card Content */}
+                  <div className="p-5 space-y-3">
+                    <h3 className={`font-serif font-bold text-lg leading-snug ${darkMode ? 'text-white group-hover:text-red-400' : 'text-slate-900 group-hover:text-red-600'} transition-colors`}>
+                      {item.title}
                     </h3>
-                    <p className="text-xs text-red-200 font-medium line-clamp-1">
-                      {farm.tagline}
+                    <p className={`text-xs ${darkMode ? 'text-neutral-400' : 'text-slate-600'} leading-relaxed`}>
+                      {item.description}
                     </p>
                   </div>
                 </div>
-
-                {/* Card Specs */}
-                <div className="p-6 space-y-4">
-                  <div className="grid grid-cols-2 gap-2 text-xs">
-                    <div className={`flex items-center space-x-2 ${darkMode ? 'bg-neutral-950 border-neutral-800' : 'bg-red-50/60 border-red-100 text-slate-800'} p-2.5 rounded-xl border`}>
-                      <Waves className="w-4 h-4 text-red-600 shrink-0" />
-                      <span className="truncate font-medium">{farm.poolSize.split(' ')[0]} Pool</span>
-                    </div>
-
-                    <div className={`flex items-center space-x-2 ${darkMode ? 'bg-neutral-950 border-neutral-800' : 'bg-emerald-50/60 border-emerald-100 text-slate-800'} p-2.5 rounded-xl border`}>
-                      <Trees className="w-4 h-4 text-emerald-600 shrink-0" />
-                      <span className="truncate font-medium">{farm.lawnSize.split(' ')[0]} Lawn</span>
-                    </div>
-                  </div>
-
-                  <p className={`text-xs ${darkMode ? 'text-neutral-400' : 'text-slate-600'} line-clamp-2 leading-relaxed`}>
-                    {farm.description}
-                  </p>
-
-                  {/* Highlights */}
-                  <div className="flex flex-wrap gap-1.5 pt-1">
-                    {farm.amenities.slice(0, 3).map((amenity, i) => (
-                      <span
-                        key={i}
-                        className={`text-[10px] ${darkMode ? 'bg-neutral-950 text-neutral-300 border-neutral-800' : 'bg-slate-100 text-slate-700 border-slate-200'} border px-2.5 py-1 rounded-lg font-medium`}
-                      >
-                        ✓ {amenity}
-                      </span>
-                    ))}
-                  </div>
-                </div>
               </div>
-
-              {/* Price & Action Footer */}
-              <div className={`p-6 pt-0 ${darkMode ? 'border-neutral-800/80' : 'border-red-100'} border-t flex items-center justify-between gap-4 mt-4`}>
-                <div>
-                  <span className="text-[10px] text-slate-500 block uppercase font-bold">12-Hr Shift From</span>
-                  <span className="font-serif font-bold text-xl text-red-600">
-                    PKR {farm.startingPrice12Hr.toLocaleString()}
-                  </span>
-                </div>
-
-                <button
-                  onClick={() => openBookingModal(farm.id)}
-                  className="px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-red-600 to-rose-700 hover:brightness-110 shadow-md flex items-center space-x-1.5 cursor-pointer active:scale-95"
-                >
-                  <CalendarCheck className="w-4 h-4 text-white" />
-                  <span>Book Now</span>
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="text-center pt-4">
-          <button
-            onClick={() => setActiveTab('farmhouses')}
-            className="px-8 py-3.5 rounded-2xl text-sm font-bold text-red-600 border border-red-300 bg-red-50 hover:bg-red-100 transition-colors inline-flex items-center space-x-2 cursor-pointer shadow-sm"
-          >
-            <span>View All Gadap Farmhouses</span>
-            <ChevronRight className="w-4 h-4 text-red-600" />
-          </button>
+            );
+          })}
         </div>
       </section>
 

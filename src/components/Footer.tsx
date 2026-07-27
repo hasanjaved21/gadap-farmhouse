@@ -61,7 +61,6 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab, openBookingModal, 
             <ul className="space-y-2 text-sm text-slate-400">
               {[
                 { id: 'home', label: 'Home Page' },
-                { id: 'farmhouses', label: 'Explore Farmhouses' },
                 { id: 'facilities', label: 'All 22+ Facilities' },
                 { id: 'events', label: 'Weddings & Events' },
                 { id: 'packages', label: 'Luxury Packages' },
