@@ -52,7 +52,6 @@ import {
   FARMHOUSES_DATA,
   FACILITIES_DATA,
   EVENTS_DATA,
-  PACKAGES_DATA,
   GALLERY_DATA,
   FAQ_DATA
 } from './data/mockData';
@@ -326,91 +325,6 @@ export default function App() {
                         <span>Reserve Event</span>
                       </button>
                     </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* PACKAGES PAGE */}
-        {activeTab === 'packages' && (
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
-            <div className="text-center space-y-4 max-w-3xl mx-auto">
-              <span className="text-xs font-bold text-amber-400 uppercase tracking-widest px-3.5 py-1.5 rounded-full bg-amber-950/60 border border-amber-500/30">
-                Transparent All-Inclusive Rates
-              </span>
-              <h1 className="font-serif font-extrabold text-4xl sm:text-5xl text-white">
-                Luxury Booking Packages
-              </h1>
-              <p className="text-sm sm:text-base text-neutral-400 leading-relaxed">
-                Choose from 12-hour day/night shift packages or full 24-hour overnight stay deals with generator fuel, water filtration, and caretaker support.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {PACKAGES_DATA.map((pkg) => (
-                <div
-                  key={pkg.id}
-                  className={`rounded-3xl bg-neutral-900 border overflow-hidden shadow-2xl transition-all duration-300 flex flex-col justify-between relative ${
-                    pkg.popular ? 'border-amber-500 ring-2 ring-amber-500/20 scale-102' : 'border-neutral-800 hover:border-amber-500/40'
-                  }`}
-                >
-                  {pkg.popular && (
-                    <div className="bg-amber-500 text-neutral-950 text-center text-xs font-bold py-1.5 uppercase tracking-widest">
-                      ⭐ Most Popular Choice
-                    </div>
-                  )}
-
-                  <div className="p-8 space-y-6">
-                    <div>
-                      <span className="text-xs font-bold text-amber-400 bg-amber-950/80 border border-amber-500/30 px-3 py-1 rounded-full">
-                        {pkg.badge}
-                      </span>
-                      <h2 className="font-serif font-bold text-2xl text-white mt-3">
-                        {pkg.title}
-                      </h2>
-                      <p className="text-xs text-neutral-400 mt-1">
-                        Suitable: {pkg.suitableFor} • {pkg.guestLimit}
-                      </p>
-                    </div>
-
-                    <div className="p-4 rounded-2xl bg-neutral-950 border border-neutral-800 space-y-2">
-                      <div className="flex justify-between items-baseline">
-                        <span className="text-xs text-neutral-400 font-bold uppercase">12-Hour Shift:</span>
-                        <span className="font-serif font-bold text-2xl text-amber-400">
-                          PKR {pkg.price12hr.toLocaleString()}
-                        </span>
-                      </div>
-                      <div className="flex justify-between items-baseline border-t border-neutral-800/80 pt-2">
-                        <span className="text-xs text-neutral-400 font-bold uppercase">24-Hour Stay:</span>
-                        <span className="font-serif font-bold text-lg text-amber-300">
-                          PKR {pkg.price24hr.toLocaleString()}
-                        </span>
-                      </div>
-                    </div>
-
-                    <div className="space-y-2.5">
-                      <span className="text-xs text-amber-400 font-bold uppercase tracking-wider block">Package Highlights:</span>
-                      <ul className="space-y-2 text-xs text-neutral-300">
-                        {pkg.features.map((feat, i) => (
-                          <li key={i} className="flex items-start space-x-2">
-                            <Check className="w-4 h-4 text-emerald-400 mt-0.5 shrink-0" />
-                            <span>{feat}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div className="p-8 pt-0">
-                    <button
-                      onClick={() => openBookingModal()}
-                      className="w-full py-3.5 rounded-2xl text-sm font-bold text-neutral-950 bg-gold-gradient hover:brightness-110 shadow-xl flex items-center justify-center space-x-2 cursor-pointer active:scale-95"
-                    >
-                      <CalendarCheck className="w-4 h-4" />
-                      <span>Reserve Package</span>
-                    </button>
                   </div>
                 </div>
               ))}

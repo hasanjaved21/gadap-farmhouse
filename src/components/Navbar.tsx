@@ -39,7 +39,6 @@ export const Navbar: React.FC<NavbarProps> = ({
     { id: 'home', label: 'Home' },
     { id: 'facilities', label: 'Facilities' },
     { id: 'events', label: 'Events' },
-    { id: 'packages', label: 'Packages' },
     { id: 'gallery', label: 'Gallery' },
     { id: 'contact', label: 'Contact' },
   ];
@@ -99,7 +98,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             className="flex items-center space-x-3 cursor-pointer group"
           >
             {/* Custom Logo Emblem */}
-            <div className="relative w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center overflow-hidden">
+            <div className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white shadow-lg flex items-center justify-center overflow-hidden shrink-0 border-2 border-red-500/30">
               <img
                 src={BRAND_INFO.logoUrl}
                 alt={BRAND_INFO.name}

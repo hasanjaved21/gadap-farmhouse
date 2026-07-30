@@ -150,7 +150,7 @@ export const HomePage: React.FC<HomePageProps> = ({
   const heroSlides = [
     {
       image: 'https://scontent.fkhi2-2.fna.fbcdn.net/v/t39.30808-6/753361657_122188669130873533_4792060991179590151_n.jpg?stp=dst-jpg_tt6&cstp=mx1600x1200&ctp=s1600x1200&_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=9wB4C-iuDhMQ7kNvwEjyUME&_nc_oc=AdqBKEkIa82CZ7HFXRI11hV3vJ8pVoASf7-2pq3KBlkb-rsEmUbl7h-PyCRpLF4J6RA&_nc_zt=23&_nc_ht=scontent.fkhi2-2.fna&_nc_gid=TOWYmDFKJMHndBBMckMlTw&_nc_ss=7b2a8&oh=00_AQDtGy3_s6FGo4cKHvUogkoK-layOd5cUZx_w-_yHHXdNQ&oe=6A6D4A21',
-      tag: '5-Star Resort Hospitality',
+      tag: '5-Star Resort & farmhouses',
       heading: 'Escape the City. Experience Nature.',
       subheading: 'Book premium farmhouses in Gadap Town for birthdays, family gatherings, weddings, BBQ nights, corporate events, and unforgettable celebrations.'
     },
@@ -206,7 +206,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       title: 'Indoor Gaming Lounge',
       badge: 'Snooker & Indoor Games',
       description: 'Escape into spacious indoor gaming lounges featuring full-size snooker tables, foosball, table tennis, and carrom.',
-      image: 'https://lh3.googleusercontent.com/d/1LP3fy-fupaDEJBer5t8yjRWFl4xLgU04',
+      image: 'https://lh3.googleusercontent.com/d/1VWijYPPI9a5wblQ4JMSgwsV862pT_evL',
       icon: Gamepad2
     },
     {
@@ -222,7 +222,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       title: 'Built-in Live BBQ Pits & Dining Gazebos',
       badge: 'Live Grill Setup',
       description: 'Built-in brick charcoal BBQ grills, skewers, preparation counters, and shaded outdoor dining gazebos under ambient garden string lights.',
-      image: 'https://lh3.googleusercontent.com/d/1mHdR0SPca5hLzn0rRoUuDCRSP0D6PrsD',
+      image: 'https://lh3.googleusercontent.com/d/18sR8eGjFiEdUNYTFVDdN9vaOYlB1veNd',
       icon: Flame
     },
     {
@@ -239,6 +239,14 @@ export const HomePage: React.FC<HomePageProps> = ({
       badge: 'Family Safe & Private',
       description: 'Safe water slides, shallow splash pools, garden swings, and fully enclosed boundary walls ensuring 100% privacy for families.',
       image: 'https://scontent.fkhi2-3.fna.fbcdn.net/v/t39.30808-6/752807453_122188670306873533_4165723509216842957_n.jpg?stp=dst-jpg_tt6&cstp=mx1280x960&ctp=s1280x960&_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=-9TUGoAGLfAQ7kNvwHCwRor&_nc_oc=AdoYOfPHZiAa5K9GnaqVzB-jkDo7xgyI5KMHpZJBVkMsPJhaQvaOsDz1frDu2K9BH68&_nc_zt=23&_nc_ht=scontent.fkhi2-3.fna&_nc_gid=D2Gs1QfG4oJQhvjiJt1wMg&_nc_ss=7b2a8&oh=00_AQD1up4JvsxAaxA87ahkzhqia3vg97p3ZU2JjdH-l5EECA&oe=6A6D7CDD',
+      icon: Smile
+    },
+    {
+      id: 'kids-play',
+      title: 'Kids Play Area & Swings',
+      badge: 'Children Outdoor Fun',
+      description: 'Dedicated safe outdoor play area featuring colorful slides, swings, activity frames, and play zones for children and toddlers.',
+      image: 'https://lh3.googleusercontent.com/d/1StWeo0n077soANW0PZ8H463jqVRx3btw',
       icon: Smile
     }
   ];

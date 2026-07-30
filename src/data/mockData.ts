@@ -7,7 +7,10 @@ export const BRAND_INFO = {
   location: 'Gadap Town, Malir, Karachi, Sindh, Pakistan',
   phone: '+92 334 3705720',
   phoneClean: '923343705720',
-  email: 'hammadghaffar684@email.com',
+  email: 'hammadghaffar684@gmail.com',
+  facebookUrl: 'https://www.facebook.com/profile.php?id=61576205991665&rdid=MYXLupe480uyFCic&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1SocvSgW43%2F#',
+  instagramUrl: 'https://www.instagram.com/hammadghaffar2',
+  tiktokUrl: 'https://www.tiktok.com/@gadapfarmhouses',
   description: 'Gadap Farmhouses provides premium farmhouse booking services in Gadap Town, Karachi. We specialize in offering beautiful farmhouses with swimming pools, BBQ facilities, spacious green lawns, sports activities, and peaceful natural surroundings for memorable family & event experiences.',
   logoUrl: 'https://lh3.googleusercontent.com/d/13ZzC15h4SoSZhmetOIf4m5-dt78-dbZW',
   logoDriveUrl: 'https://drive.google.com/file/d/13ZzC15h4SoSZhmetOIf4m5-dt78-dbZW/view?usp=sharing',
@@ -635,7 +638,7 @@ export const GALLERY_DATA: GalleryItem[] = [
     id: 'gal-amenity-3',
     title: 'Indoor Gaming Lounge',
     category: 'Indoor Games',
-    imageUrl: 'https://lh3.googleusercontent.com/d/1LP3fy-fupaDEJBer5t8yjRWFl4xLgU04',
+    imageUrl: 'https://lh3.googleusercontent.com/d/1VWijYPPI9a5wblQ4JMSgwsV862pT_evL',
     caption: 'Spacious indoor gaming lounge featuring full-size snooker tables, foosball, table tennis, and carrom.',
     farmhouseName: 'Gadap Farmhouses'
   },
@@ -651,7 +654,7 @@ export const GALLERY_DATA: GalleryItem[] = [
     id: 'gal-amenity-5',
     title: 'Built-in Live BBQ Pits & Dining Gazebos',
     category: 'BBQ Area',
-    imageUrl: 'https://lh3.googleusercontent.com/d/1mHdR0SPca5hLzn0rRoUuDCRSP0D6PrsD',
+    imageUrl: 'https://lh3.googleusercontent.com/d/18sR8eGjFiEdUNYTFVDdN9vaOYlB1veNd',
     caption: 'Built-in brick charcoal BBQ grills, skewers, preparation counters, and shaded outdoor dining gazebos.',
     farmhouseName: 'Gadap Farmhouses'
   },
@@ -669,6 +672,14 @@ export const GALLERY_DATA: GalleryItem[] = [
     category: 'Swimming Pool',
     imageUrl: 'https://scontent.fkhi2-3.fna.fbcdn.net/v/t39.30808-6/752807453_122188670306873533_4165723509216842957_n.jpg?stp=dst-jpg_tt6&cstp=mx1280x960&ctp=s1280x960&_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=-9TUGoAGLfAQ7kNvwHCwRor&_nc_oc=AdoYOfPHZiAa5K9GnaqVzB-jkDo7xgyI5KMHpZJBVkMsPJhaQvaOsDz1frDu2K9BH68&_nc_zt=23&_nc_ht=scontent.fkhi2-3.fna&_nc_gid=D2Gs1QfG4oJQhvjiJt1wMg&_nc_ss=7b2a8&oh=00_AQD1up4JvsxAaxA87ahkzhqia3vg97p3ZU2JjdH-l5EECA&oe=6A6D7CDD',
     caption: 'Safe water slides, shallow splash pools, garden swings, and fully enclosed boundary walls.',
+    farmhouseName: 'Gadap Farmhouses'
+  },
+  {
+    id: 'gal-amenity-8',
+    title: 'Kids Play Area & Swings',
+    category: 'Gardens',
+    imageUrl: 'https://lh3.googleusercontent.com/d/1StWeo0n077soANW0PZ8H463jqVRx3btw',
+    caption: 'Enclosed safe outdoor play zone with swings, slides, climbing frames, and fun games tailored for kids and toddlers.',
     farmhouseName: 'Gadap Farmhouses'
   },
   {
