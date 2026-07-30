@@ -322,11 +322,11 @@ export const FACILITIES_DATA: Facility[] = [
   },
   {
     id: 'fac-luxury-rooms',
-    title: 'Luxury Rooms',
-    description: 'Air-conditioned master suites with plush king beds, attached modern bathrooms, and garden views.',
+    title: 'Comfortable Rooms',
+    description: 'Spacious air-conditioned bedrooms with plush bedding, attached modern bathrooms, and relaxing garden views.',
     category: 'comfort',
     iconName: 'Bed',
-    featuredImage: 'https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=800&q=80',
+    featuredImage: 'https://lh3.googleusercontent.com/d/17ErQVZs_MqgpfPQTqWD6oT91YZh1wuEE',
     highlight: 'AC Master Suites'
   },
   {
@@ -644,10 +644,10 @@ export const GALLERY_DATA: GalleryItem[] = [
   },
   {
     id: 'gal-amenity-4',
-    title: 'Executive Bedrooms & Suites',
+    title: 'Comfortable Rooms',
     category: 'Rooms',
-    imageUrl: 'https://scontent.fkhi2-2.fna.fbcdn.net/v/t39.30808-6/753241586_122188669688873533_5485373068986998170_n.jpg?stp=dst-jpg_tt6&cstp=mx1600x1200&ctp=s1600x1200&_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=1htThUruZsoQ7kNvwGGRrBD&_nc_oc=Adqp6vwgfMSsJFsTXFCRNMxJsJxvH-gVDfgHnfmDDf7arNRYZDbmwC2hKzozaHkMzkDBUMJObkJhYHztBovJf7b6&_nc_zt=23&_nc_ht=scontent.fkhi2-2.fna&_nc_gid=it9OKhO5oSDoeyKFrRhjeA&_nc_ss=7b2a8&oh=00_AQAPgdPW_fneGoNaMcPR7ti6gbmrDGxGkFgU3DjMAH1Rrg&oe=6A6D5B55',
-    caption: 'Master bedrooms with attached modern washrooms, clean fresh bedding, vanity mirrors, and comfortable seating.',
+    imageUrl: 'https://lh3.googleusercontent.com/d/17ErQVZs_MqgpfPQTqWD6oT91YZh1wuEE',
+    caption: 'Air-conditioned comfortable rooms with attached modern washrooms, clean fresh bedding, vanity mirrors, and comfortable seating.',
     farmhouseName: 'Gadap Farmhouses'
   },
   {

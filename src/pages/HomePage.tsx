@@ -211,10 +211,10 @@ export const HomePage: React.FC<HomePageProps> = ({
     },
     {
       id: 'bedrooms',
-      title: 'Executive Bedrooms & Suites',
-      badge: 'Luxury Overnight Stay',
-      description: 'Master bedrooms with attached modern washrooms, clean fresh bedding, vanity mirrors, and comfortable seating.',
-      image: 'https://scontent.fkhi2-2.fna.fbcdn.net/v/t39.30808-6/753241586_122188669688873533_5485373068986998170_n.jpg?stp=dst-jpg_tt6&cstp=mx1600x1200&ctp=s1600x1200&_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=1htThUruZsoQ7kNvwGGRrBD&_nc_oc=Adqp6vwgfMSsJFsTXFCRNMxJsJxvH-gVDfgHnfmDDf7arNRYZDbmwC2hKzozaHkMzkDBUMJObkJhYHztBovJf7b6&_nc_zt=23&_nc_ht=scontent.fkhi2-2.fna&_nc_gid=it9OKhO5oSDoeyKFrRhjeA&_nc_ss=7b2a8&oh=00_AQAPgdPW_fneGoNaMcPR7ti6gbmrDGxGkFgU3DjMAH1Rrg&oe=6A6D5B55',
+      title: 'Comfortable Rooms',
+      badge: 'Air-Conditioned Comfort',
+      description: 'Spacious air-conditioned bedrooms with attached modern washrooms, clean fresh bedding, vanity mirrors, and comfortable seating.',
+      image: 'https://lh3.googleusercontent.com/d/17ErQVZs_MqgpfPQTqWD6oT91YZh1wuEE',
       icon: BedDouble
     },
     {
