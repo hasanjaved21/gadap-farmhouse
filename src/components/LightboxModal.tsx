@@ -64,7 +64,7 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({ item, onClose, ope
             <button
               onClick={() => {
                 onClose();
-                openBookingModal();
+                openBookingModal(item.farmhouseName);
               }}
               className="w-full py-3 px-4 rounded-xl text-xs font-bold text-neutral-950 bg-gold-gradient hover:brightness-110 shadow-lg flex items-center justify-center space-x-2"
             >

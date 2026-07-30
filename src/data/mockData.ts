@@ -259,192 +259,84 @@ export const FARMHOUSES_DATA: Farmhouse[] = [
 export const FACILITIES_DATA: Facility[] = [
   {
     id: 'fac-pool',
-    title: 'Swimming Pool',
-    description: 'Cleaned continuously with automated filtration systems, shallow to 7ft deep ends, and night lighting.',
+    title: 'Royal Crystal Swimming Pool & Cascade Waterfall Complex',
+    description: 'Featuring continuous multi-stage sand filtration systems ensuring 100% hygienic crystal water. Complete with a 7ft deep adult swimming zone, cascading stone waterfall, surrounding sun loungers, and LED underwater night lighting for evening dips.',
     category: 'water',
     iconName: 'Waves',
-    featuredImage: 'https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=800&q=80',
-    highlight: 'Crystal Clear Water'
-  },
-  {
-    id: 'fac-kids-pool',
-    title: 'Kids Pool',
-    description: 'Shallow 1.5ft to 2ft safe water splash zones designed specifically for toddlers and young children.',
-    category: 'water',
-    iconName: 'Smile',
-    featuredImage: 'https://images.unsplash.com/photo-1572331165267-854da2b10ccc?auto=format&fit=crop&w=800&q=80',
-    highlight: 'Safety Assured'
-  },
-  {
-    id: 'fac-bbq',
-    title: 'BBQ Area',
-    description: 'Dedicated brick BBQ grill setups with charcoal pits, exhaust covers, and outdoor skewers ready for use.',
-    category: 'services',
-    iconName: 'Flame',
-    featuredImage: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80',
-    highlight: 'Grill Ready'
+    featuredImage: 'https://lh3.googleusercontent.com/d/140lTiQV9NCrn5rHAfLy8XxK8TtiMwtH_',
+    highlight: 'Continuous Automated Filtration'
   },
   {
     id: 'fac-cricket',
-    title: 'Cricket Ground',
-    description: 'Cemented practice pitch with floodlights for day-and-night tape-ball or hard-ball cricket matches.',
+    title: 'Professional Floodlit Cricket Pitch & Multi-Sports Arena',
+    description: 'Full-length cemented cricket pitch surrounded by lush green sports turf and equipped with commercial high-power LED floodlights. Perfect for night tape-ball tournaments, football matches, and corporate team sports competitions.',
     category: 'sports',
     iconName: 'Trophy',
-    featuredImage: 'https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80',
-    highlight: 'Floodlit Pitch'
-  },
-  {
-    id: 'fac-football',
-    title: 'Football Area',
-    description: 'Spacious grassy mini pitch with goalposts for energetic friendly matches and team activities.',
-    category: 'sports',
-    iconName: 'Activity',
-    featuredImage: 'https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=800&q=80',
-    highlight: 'Grass Pitch'
+    featuredImage: 'https://scontent.fkhi11-2.fna.fbcdn.net/v/t39.30808-6/749315193_122188669226873533_785521168422915001_n.jpg?stp=dst-jpg_tt6&cstp=mx1600x1200&ctp=s1600x1200&_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=LV2LLdbvJvAQ7kNvwFxkMwU&_nc_oc=AdppGEMNEtz_fFVePJyOqr5HGTVJ1R_spJowJ7wy6OUZ1X-ZqSOO0vCCHVOPvkBehz90lyR9syNUvvba7nWOT1HD&_nc_zt=23&_nc_ht=scontent.fkhi11-2.fna&_nc_gid=T7ri_NAwDsh7qkdg86r_Lw&_nc_ss=7b2a8&oh=00_AQCfu7gE6ZvLVzSLwQ6HviLhrPFpF9Xo3GVKbsE-OF0O8w&oe=6A6D410B',
+    highlight: 'Night Tournaments Ready'
   },
   {
     id: 'fac-indoor-games',
-    title: 'Indoor Games',
-    description: 'Snooker tables, foosball, table tennis, carrom boards, and ludo stations inside air-conditioned rooms.',
+    title: 'Executive AC Indoor Gaming Lounge & Snooker Arena',
+    description: 'Climate-controlled indoor recreational lounge housing a full-size wooden snooker table, tournament foosball, table tennis, carrom boards, and ludo stations. Keeps guests entertained during hot afternoons or late-night gaming sessions.',
     category: 'sports',
     iconName: 'Gamepad2',
-    featuredImage: 'https://images.unsplash.com/photo-1511193311914-0346f16efe90?auto=format&fit=crop&w=800&q=80',
-    highlight: 'AC Gaming Lounge'
-  },
-  {
-    id: 'fac-outdoor-sitting',
-    title: 'Outdoor Sitting',
-    description: 'Traditional Punjabi charpais, luxury patio rattan furniture, shaded pergolas, and garden benches.',
-    category: 'comfort',
-    iconName: 'Armchair',
-    featuredImage: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80',
-    highlight: 'Scenic Relaxing'
+    featuredImage: 'https://lh3.googleusercontent.com/d/1VWijYPPI9a5wblQ4JMSgwsV862pT_evL',
+    highlight: 'Snooker, Foosball & TT'
   },
   {
     id: 'fac-luxury-rooms',
-    title: 'Comfortable Rooms',
-    description: 'Spacious air-conditioned bedrooms with plush bedding, attached modern bathrooms, and relaxing garden views.',
+    title: 'Luxury AC Master Suites & Private VIP Lounges',
+    description: 'Elegantly furnished master bedrooms equipped with split air conditioners, plush mattresses, clean sanitized linens, attached modern washrooms with geysers, vanity mirrors, and spacious sitting sofas for maximum relaxation.',
     category: 'comfort',
     iconName: 'Bed',
     featuredImage: 'https://lh3.googleusercontent.com/d/17ErQVZs_MqgpfPQTqWD6oT91YZh1wuEE',
-    highlight: 'AC Master Suites'
+    highlight: 'Attached Modern Baths'
   },
   {
-    id: 'fac-kitchen',
-    title: 'Fully Equipped Kitchen',
-    description: 'Gas stoves, deep freezers, microwave ovens, large cooking utensils, and food prep counters.',
+    id: 'fac-bbq',
+    title: 'Traditional Brick Charcoal BBQ Station & Open-Air Gazebos',
+    description: 'Custom-built brick charcoal barbecue pits with heavy-duty grill grates, skewer sets, prep tables, and adjacent shaded dining gazebos decorated with warm outdoor string lights for memorable live grill feasts.',
     category: 'services',
-    iconName: 'Utensils',
-    featuredImage: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80',
-    highlight: 'Deep Freezers Included'
+    iconName: 'Flame',
+    featuredImage: 'https://lh3.googleusercontent.com/d/18sR8eGjFiEdUNYTFVDdN9vaOYlB1veNd',
+    highlight: 'Live Grill Setup & Skewers'
   },
   {
-    id: 'fac-generator',
-    title: 'Generator Backup',
-    description: 'Heavy duty automatic standby generators ensuring uninterrupted electricity for ACs, pumps, and lights.',
-    category: 'services',
-    iconName: 'Zap',
-    featuredImage: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=800&q=80',
-    highlight: '24/7 Power Assurance'
-  },
-  {
-    id: 'fac-family-hall',
-    title: 'Family Hall',
-    description: 'Spacious indoor carpeted or tiled halls with comfortable sofas and dining space for indoor gatherings.',
+    id: 'fac-nightlife',
+    title: 'Illuminated Night Garden Ambiance & Poolside Celebration Lounge',
+    description: 'Transform your evening into a magical night experience with submerged pool lights, fairy-light canopy trees, outdoor acoustic ambiance, sound system support, and high-power generator backup for uninterrupted night parties.',
     category: 'events',
-    iconName: 'Users',
-    featuredImage: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=800&q=80',
-    highlight: 'Spacious Seating'
+    iconName: 'Moon',
+    featuredImage: 'https://lh3.googleusercontent.com/d/14nJrh1OYJsxq01uVbdkmcqr0k2PaR7vH',
+    highlight: 'Fairy Lights & Music Setup'
   },
   {
-    id: 'fac-garden',
-    title: 'Lush Gardens',
-    description: 'Freshly mowed Bermuda grass lawns surrounded by flowering plants, palm trees, and fruit orchards.',
-    category: 'comfort',
+    id: 'fac-lawns',
+    title: 'Royal Velvet Grass Event Grounds & Date Palm Estate Lawns',
+    description: 'Immaculately manicured green lawns surrounded by tall date palm trees and vibrant flower beds. Offers massive open space for outdoor wedding receptions, corporate retreats, birthday stages, and large family gatherings.',
+    category: 'events',
     iconName: 'Trees',
-    featuredImage: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=800&q=80',
-    highlight: 'Fresh Natural Air'
+    featuredImage: 'https://scontent.fkhi2-3.fna.fbcdn.net/v/t39.30808-6/753503103_122188670018873533_196524260830104006_n.jpg?stp=dst-jpg_tt6&cstp=mx1600x1200&ctp=s1600x1200&_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=pEjH5_Y-hVoQ7kNvwEHv7D4&_nc_oc=Adr0H92iq6Dd6xPeqal_C4dVvD8yphjp0Krv6Ho18d7AQBfPI-xK6uiRAtC7u8vife8&_nc_zt=23&_nc_ht=scontent.fkhi2-3.fna&_nc_gid=NKyUxvHjSOEbdP-TMSwPVg&_nc_ss=7b2a8&oh=00_AQDfpRjTlOmSkDKBq-jeGIExnX_c5Kicbb1ry7Jj0G8BNw&oe=6A6D3346',
+    highlight: '500+ Guest Capacity'
   },
   {
-    id: 'fac-photography',
-    title: 'Photography Spots',
-    description: 'Aesthetic photo booths, decorative archways, poolside night lighting, and green backdrops for photoshoots.',
-    category: 'events',
-    iconName: 'Camera',
-    featuredImage: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80',
-    highlight: 'Instagram Ready'
+    id: 'fac-kids-pool',
+    title: 'Toddler Safe Water Splash Park & Aqua Slide Arena',
+    description: 'Dedicated shallow splash zone (1.5ft to 2ft depth) with colorful water slides and gentle fountains, designed specifically so toddlers and young children can play safely under parental supervision.',
+    category: 'water',
+    iconName: 'Smile',
+    featuredImage: 'https://scontent.fkhi2-3.fna.fbcdn.net/v/t39.30808-6/752807453_122188670306873533_4165723509216842957_n.jpg?stp=dst-jpg_tt6&cstp=mx1280x960&ctp=s1280x960&_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=-9TUGoAGLfAQ7kNvwHCwRor&_nc_oc=AdoYOfPHZiAa5K9GnaqVzB-jkDo7xgyI5KMHpZJBVkMsPJhaQvaOsDz1frDu2K9BH68&_nc_zt=23&_nc_ht=scontent.fkhi2-3.fna&_nc_gid=D2Gs1QfG4oJQhvjiJt1wMg&_nc_ss=7b2a8&oh=00_AQD1up4JvsxAaxA87ahkzhqia3vg97p3ZU2JjdH-l5EECA&oe=6A6D7CDD',
+    highlight: 'Shallow 1.5ft Safe Water'
   },
   {
-    id: 'fac-bonfire',
-    title: 'Bonfire Area',
-    description: 'Dedicated stone pit for winter night bonfires, acoustic music circles, and marshmallow roasting.',
-    category: 'events',
-    iconName: 'Sun',
-    featuredImage: 'https://images.unsplash.com/photo-1526498460520-4c246339dccb?auto=format&fit=crop&w=800&q=80',
-    highlight: 'Cozy Winter Nights'
-  },
-  {
-    id: 'fac-wifi',
-    title: 'High Speed WiFi',
-    description: 'High-speed wireless internet covering main lounges, poolside, and garden areas for uninterrupted sharing.',
-    category: 'services',
-    iconName: 'Wifi',
-    featuredImage: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80',
-    highlight: 'Seamless Connectivity'
-  },
-  {
-    id: 'fac-music',
-    title: 'Music System',
-    description: 'Bluetooth sound speakers with wireless mics available for party tunes, announcements, and karaoke.',
-    category: 'events',
-    iconName: 'Music',
-    featuredImage: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=80',
-    highlight: 'Party Sound Ready'
-  },
-  {
-    id: 'fac-washrooms',
-    title: 'Clean Washrooms',
-    description: 'Hygienic tiled western & asian washrooms equipped with geysers and instant water pressure.',
+    id: 'fac-kids-play',
+    title: 'Children’s Adventure Playground & Activity Swings',
+    description: 'Gated dry outdoor play arena featuring sturdy swing sets, slide towers, see-saws, and climbing frames set over soft grass, offering endless outdoor fun for kids in a 100% private and secure environment.',
     category: 'comfort',
-    iconName: 'CheckCircle',
-    featuredImage: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80',
-    highlight: 'Sanitized Daily'
-  },
-  {
-    id: 'fac-changing-rooms',
-    title: 'Changing Rooms',
-    description: 'Separate poolside changing rooms for ladies and gents with clothes hooks and mirrors.',
-    category: 'comfort',
-    iconName: 'DoorClosed',
-    featuredImage: 'https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=800&q=80',
-    highlight: 'Poolside Privacy'
-  },
-  {
-    id: 'fac-parking',
-    title: 'Secure Parking',
-    description: 'Internal boundary wall parking area for 20 to 50 vehicles with night floodlights and security guard post.',
-    category: 'services',
-    iconName: 'Car',
-    featuredImage: 'https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=800&q=80',
-    highlight: 'Inside Gated Compound'
-  },
-  {
-    id: 'fac-security',
-    title: 'Security Staff & CCTV',
-    description: 'Round-the-clock armed security personnel, high boundary walls, and entrance monitoring for peace of mind.',
-    category: 'services',
-    iconName: 'ShieldCheck',
-    featuredImage: 'https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=800&q=80',
-    highlight: '100% Safe Family Environment'
-  },
-  {
-    id: 'fac-cleaning',
-    title: 'On-site Cleaning Staff',
-    description: 'Dedicated caretakers to assist with pool maintenance, trash clearance, and general housekeeping on demand.',
-    category: 'services',
-    iconName: 'Sparkles',
-    featuredImage: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80',
-    highlight: 'Attentive Caretakers'
+    iconName: 'Smile',
+    featuredImage: 'https://lh3.googleusercontent.com/d/1StWeo0n077soANW0PZ8H463jqVRx3btw',
+    highlight: 'Swings, Slides & Play Frames'
   }
 ];
 
@@ -622,7 +514,7 @@ export const GALLERY_DATA: GalleryItem[] = [
     id: 'gal-amenity-1',
     title: 'Filtered Swimming Pools & Waterfalls',
     category: 'Swimming Pool',
-    imageUrl: 'https://scontent.fkhi2-3.fna.fbcdn.net/v/t39.30808-6/731366317_122185235084873533_954250061520681854_n.jpg?stp=dst-jpg_tt6&cstp=mx1200x1600&ctp=s1200x1600&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=7gBr3Q4zt-0Q7kNvwGZtICT&_nc_oc=AdqjIp2cHtyhbswEYATDVtGtChOipcMzfPhu0_GbdPJTkWKBJnBsVQCYU9v5FEU5XNl-bWrNQw0rRlRl0KwVFcdr&_nc_zt=23&_nc_ht=scontent.fkhi2-3.fna&_nc_gid=9MJ182IROdSpz02B5G_h6w&_nc_ss=7b2a8&oh=00_AQCTF7lh9AgRLdQMzomeeuaWLqL8AjPnBabjx_ZtYnNEdQ&oe=6A6D3C00',
+    imageUrl: 'https://lh3.googleusercontent.com/d/140lTiQV9NCrn5rHAfLy8XxK8TtiMwtH_',
     caption: 'Adult deep-end pool & shallow splash pools with continuous water filtration and cascading waterfalls.',
     farmhouseName: 'Gadap Farmhouses'
   },
@@ -683,52 +575,20 @@ export const GALLERY_DATA: GalleryItem[] = [
     farmhouseName: 'Gadap Farmhouses'
   },
   {
-    id: 'gal-1',
-    title: 'Illuminated Night Pool Deck',
-    category: 'Swimming Pool',
-    imageUrl: 'https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=1200&q=80',
-    caption: 'Crystal clear illuminated pool for nighttime swimming in Gadap Town.',
-    farmhouseName: 'Royal Palms Grand Estate'
+    id: 'gal-amenity-9',
+    title: 'Night Life Ambiance & Lighting',
+    category: 'Night Life',
+    imageUrl: 'https://lh3.googleusercontent.com/d/14nJrh1OYJsxq01uVbdkmcqr0k2PaR7vH',
+    caption: 'Illuminated night pool decks, ambient garden string lights, music arrangements, and magical evening celebrations.',
+    farmhouseName: 'Gadap Farmhouses'
   },
   {
-    id: 'gal-3',
-    title: 'Manicured Event Lawn',
-    category: 'Gardens',
-    imageUrl: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1200&q=80',
-    caption: 'Lush green velvet grass ideal for outdoor weddings and sports.',
-    farmhouseName: 'Paradise Cove Event Estate'
-  },
-  {
-    id: 'gal-6',
-    title: 'Gadap Sunset Horizon',
-    category: 'Night View',
-    imageUrl: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80',
-    caption: 'Breathtaking golden evening sky over Gadap Town farmhouses.',
-    farmhouseName: 'Sunset Valley Retreat'
-  },
-  {
-    id: 'gal-7',
-    title: 'Poolside Birthday Stage',
-    category: 'Birthday Events',
-    imageUrl: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1200&q=80',
-    caption: 'Colorful birthday balloon arch and cake cutting table setup.',
-    farmhouseName: 'Royal Palms Grand Estate'
-  },
-  {
-    id: 'gal-8',
-    title: 'Fairy Light Wedding Banquet',
+    id: 'gal-amenity-10',
+    title: 'Grand Event Grounds & Celebrations',
     category: 'Wedding Events',
-    imageUrl: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1200&q=80',
-    caption: 'Royal outdoor wedding dinner arrangement for 300 guests.',
-    farmhouseName: 'Paradise Cove Event Estate'
-  },
-  {
-    id: 'gal-9',
-    title: 'Outdoor Garden Dining',
-    category: 'Outdoor Dining',
-    imageUrl: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80',
-    caption: 'Under-the-stars seating arrangements surrounded by nature.',
-    farmhouseName: 'Palm Riviera Luxury Villa'
+    imageUrl: 'https://scontent.fkhi2-2.fna.fbcdn.net/v/t39.30808-6/752497548_122188669970873533_2773057153196852196_n.jpg?stp=dst-jpg_tt6&cstp=mx1600x1200&ctp=s1600x1200&_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=TCeb-O7ziVoQ7kNvwGXduU-&_nc_oc=Adqb5OLXFaNEcnBZLSFhx4d2PSdrHVFMUxDkPJLsGqyeB0y8l9WeBTU91Ros1HjDLvPAlxu9jkJEva4BbKrDHHVR&_nc_zt=23&_nc_ht=scontent.fkhi2-2.fna&_nc_gid=1JxizQdmw0ONyFy2rtrCJA&_nc_ss=7b2a8&oh=00_AQGazbQGQqqz3GVcOEEdU8phafxwTgHywkoNf480i8misw&oe=6A715240',
+    caption: 'Spacious green grounds and luxury farmhouse setting capable of hosting memorable events with complete generator backup.',
+    farmhouseName: 'Gadap Farmhouses'
   }
 ];
 

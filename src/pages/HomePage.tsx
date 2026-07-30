@@ -26,7 +26,8 @@ import {
   Bot,
   Gamepad2,
   BedDouble,
-  Zap
+  Zap,
+  Moon
 } from 'lucide-react';
 import { FARMHOUSES_DATA, REVIEWS_DATA, EVENTS_DATA, BRAND_INFO } from '../data/mockData';
 import { Farmhouse } from '../types';
@@ -150,20 +151,20 @@ export const HomePage: React.FC<HomePageProps> = ({
   const heroSlides = [
     {
       image: 'https://scontent.fkhi2-2.fna.fbcdn.net/v/t39.30808-6/753361657_122188669130873533_4792060991179590151_n.jpg?stp=dst-jpg_tt6&cstp=mx1600x1200&ctp=s1600x1200&_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=9wB4C-iuDhMQ7kNvwEjyUME&_nc_oc=AdqBKEkIa82CZ7HFXRI11hV3vJ8pVoASf7-2pq3KBlkb-rsEmUbl7h-PyCRpLF4J6RA&_nc_zt=23&_nc_ht=scontent.fkhi2-2.fna&_nc_gid=TOWYmDFKJMHndBBMckMlTw&_nc_ss=7b2a8&oh=00_AQDtGy3_s6FGo4cKHvUogkoK-layOd5cUZx_w-_yHHXdNQ&oe=6A6D4A21',
-      tag: '5-Star Resort & farmhouses',
-      heading: 'Escape the City. Experience Nature.',
+      tag: '5-Star Resort & Farmhouses',
+      heading: 'Escape the City. Discover Luxury.',
       subheading: 'Book premium farmhouses in Gadap Town for birthdays, family gatherings, weddings, BBQ nights, corporate events, and unforgettable celebrations.'
     },
     {
-      image: 'https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=1920&q=80',
+      image: 'https://lh3.googleusercontent.com/d/140lTiQV9NCrn5rHAfLy8XxK8TtiMwtH_',
       tag: 'Filtered Swimming Pools',
       heading: 'Crystal Water & Private Pools',
       subheading: 'Continuous water filtration, shallow kids splash areas, night floodlighting, and poolside lounges designed for total relaxation.'
     },
     {
-      image: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1920&q=80',
+      image: 'https://scontent.fkhi2-2.fna.fbcdn.net/v/t39.30808-6/752497548_122188669970873533_2773057153196852196_n.jpg?stp=dst-jpg_tt6&cstp=mx1600x1200&ctp=s1600x1200&_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=TCeb-O7ziVoQ7kNvwGXduU-&_nc_oc=Adqb5OLXFaNEcnBZLSFhx4d2PSdrHVFMUxDkPJLsGqyeB0y8l9WeBTU91Ros1HjDLvPAlxu9jkJEva4BbKrDHHVR&_nc_zt=23&_nc_ht=scontent.fkhi2-2.fna&_nc_gid=1JxizQdmw0ONyFy2rtrCJA&_nc_ss=7b2a8&oh=00_AQGazbQGQqqz3GVcOEEdU8phafxwTgHywkoNf480i8misw&oe=6A715240',
       tag: 'Grand Event Lawns',
-      heading: 'Royal Weddings & BBQ Nights',
+      heading: 'Grand Event Grounds & Celebrations',
       subheading: 'Spacious green grounds capable of hosting 350+ guests with complete generator backup and secure gated parking.'
     }
   ];
@@ -190,7 +191,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       title: 'Filtered Swimming Pools & Waterfalls',
       badge: 'Continuous Filtration',
       description: 'Adult deep-end pools & shallow splash pools for toddlers with continuous water filtration, cascading waterfalls, and night LED lighting.',
-      image: 'https://scontent.fkhi2-3.fna.fbcdn.net/v/t39.30808-6/731366317_122185235084873533_954250061520681854_n.jpg?stp=dst-jpg_tt6&cstp=mx1200x1600&ctp=s1200x1600&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=7gBr3Q4zt-0Q7kNvwGZtICT&_nc_oc=AdqjIp2cHtyhbswEYATDVtGtChOipcMzfPhu0_GbdPJTkWKBJnBsVQCYU9v5FEU5XNl-bWrNQw0rRlRl0KwVFcdr&_nc_zt=23&_nc_ht=scontent.fkhi2-3.fna&_nc_gid=9MJ182IROdSpz02B5G_h6w&_nc_ss=7b2a8&oh=00_AQCTF7lh9AgRLdQMzomeeuaWLqL8AjPnBabjx_ZtYnNEdQ&oe=6A6D3C00',
+      image: 'https://lh3.googleusercontent.com/d/140lTiQV9NCrn5rHAfLy8XxK8TtiMwtH_',
       icon: Waves
     },
     {
@@ -226,6 +227,14 @@ export const HomePage: React.FC<HomePageProps> = ({
       icon: Flame
     },
     {
+      id: 'nightlife',
+      title: 'Night Life',
+      badge: 'Evening & Night Ambiance',
+      description: 'Illuminated night pool decks, ambient outdoor garden lights, music arrangements, and magical night celebrations.',
+      image: 'https://lh3.googleusercontent.com/d/14nJrh1OYJsxq01uVbdkmcqr0k2PaR7vH',
+      icon: Moon
+    },
+    {
       id: 'lawns',
       title: 'Expansive Lush Lawns & Event Grounds',
       badge: 'Up to 500+ Capacity',
@@ -250,6 +259,12 @@ export const HomePage: React.FC<HomePageProps> = ({
       icon: Smile
     }
   ];
+
+  const handleDirectWhatsAppBooking = () => {
+    const msg = 'Hi Hammad Ghaffar! I want to inquire about booking a farmhouse in Gadap Town.';
+    const url = `https://wa.me/${BRAND_INFO.phoneClean}?text=${encodeURIComponent(msg)}`;
+    window.open(url, '_blank');
+  };
 
   return (
     <div className="space-y-20 pb-16 font-sans">
@@ -288,7 +303,7 @@ export const HomePage: React.FC<HomePageProps> = ({
           {/* Action Buttons */}
           <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
             <button
-              onClick={() => openBookingModal()}
+              onClick={handleDirectWhatsAppBooking}
               className="px-8 py-4 rounded-2xl text-base font-bold text-white bg-gradient-to-r from-red-600 via-red-700 to-rose-800 hover:from-red-700 hover:to-rose-900 shadow-2xl shadow-red-600/40 transition-all duration-300 flex items-center space-x-2 border border-red-500/50 cursor-pointer active:scale-95"
             >
               <CalendarCheck className="w-5 h-5 text-white" />
@@ -310,7 +325,7 @@ export const HomePage: React.FC<HomePageProps> = ({
               <div className="p-1 rounded-lg bg-white/20 text-white group-hover:rotate-12 transition-transform">
                 <Sparkles className="w-4 h-4 text-amber-200 animate-pulse" />
               </div>
-              <span>Ask AI Agent</span>
+              <span>Gadap Farmhouses AI</span>
               <Bot className="w-4 h-4 text-rose-200" />
             </button>
           </div>
@@ -475,68 +490,97 @@ export const HomePage: React.FC<HomePageProps> = ({
         </div>
       </section>
 
-      {/* 5. SERVICES & EVENT TYPES */}
+      {/* 5. EASY 3-STEP WHATSAPP DIRECT BOOKING PROCESS */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         <div className="text-center space-y-3">
           <span className="text-xs font-bold text-red-700 uppercase tracking-widest px-3.5 py-1.5 rounded-full bg-red-100 border border-red-200">
-            Tailored Celebrations
+            Hassle-Free Reservation
           </span>
           <h2 className={`font-serif font-bold text-3xl sm:text-4xl ${darkMode ? 'text-white' : 'text-slate-900'}`}>
-            Services & Event Hosting
+            How To Book Your Farmhouse
           </h2>
           <p className="text-sm text-slate-600 max-w-2xl mx-auto">
-            From intimate birthday pool parties to lavish wedding receptions and corporate tournaments, Gadap Farmhouses provides tailor-made settings.
+            Book directly with owner {BRAND_INFO.owner} in 3 simple steps with 100% deposit transparency and date confirmation.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {EVENTS_DATA.map((evt) => (
-            <div
-              key={evt.id}
-              className={`rounded-2xl ${darkMode ? 'bg-neutral-900 border-neutral-800' : 'bg-white border-red-100 hover:border-red-300'} border overflow-hidden shadow-lg transition-all duration-300 group flex flex-col justify-between`}
-            >
-              <div className="relative h-48 overflow-hidden">
-                <img
-                  src={evt.image}
-                  alt={evt.title}
-                  referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
-                <div className="absolute bottom-3 left-4 right-4">
-                  <h3 className="font-serif font-bold text-lg text-white">
-                    {evt.title}
-                  </h3>
-                  <span className="text-[10px] text-red-200 font-semibold">
-                    Ideal: {evt.idealGuestCount}
-                  </span>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+          {/* Step 1 */}
+          <div className={`p-8 rounded-3xl ${darkMode ? 'bg-neutral-900 border-neutral-800' : 'bg-white border-red-100 shadow-xl'} border relative space-y-4 flex flex-col justify-between group hover:border-red-500/50 transition-all`}>
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-red-600 to-rose-700 text-white flex items-center justify-center font-bold text-lg shadow-lg">
+                  01
                 </div>
+                <Building2 className="w-6 h-6 text-red-500" />
               </div>
-
-              <div className="p-5 space-y-3 flex-1 flex flex-col justify-between">
-                <p className={`text-xs ${darkMode ? 'text-neutral-400' : 'text-slate-600'} leading-relaxed`}>
-                  {evt.shortDesc}
-                </p>
-
-                <div className={`pt-2 border-t ${darkMode ? 'border-neutral-800' : 'border-red-100'} flex items-center justify-between`}>
-                  <button
-                    onClick={() => setActiveTab('events')}
-                    className="text-xs font-bold text-red-600 hover:text-red-700 inline-flex items-center space-x-1"
-                  >
-                    <span>Event Details</span>
-                    <ChevronRight className="w-3.5 h-3.5" />
-                  </button>
-
-                  <button
-                    onClick={() => openBookingModal()}
-                    className="px-3 py-1.5 rounded-lg text-[11px] font-bold text-white bg-gradient-to-r from-red-600 to-rose-700"
-                  >
-                    Inquire Event
-                  </button>
-                </div>
-              </div>
+              <h3 className={`font-serif font-bold text-xl ${darkMode ? 'text-white' : 'text-slate-900'}`}>
+                Select Your Farmhouse
+              </h3>
+              <p className={`text-xs ${darkMode ? 'text-neutral-400' : 'text-slate-600'} leading-relaxed`}>
+                Explore our portfolio of luxury Gadap Town farmhouses featuring filtered swimming pools, AC master bedrooms, and floodlit grounds.
+              </p>
             </div>
-          ))}
+            <button
+              onClick={() => setActiveTab('farmhouses')}
+              className="pt-4 border-t border-red-500/10 text-xs font-bold text-red-600 hover:text-red-700 inline-flex items-center space-x-1"
+            >
+              <span>View All Farmhouses</span>
+              <ChevronRight className="w-3.5 h-3.5" />
+            </button>
+          </div>
+
+          {/* Step 2 */}
+          <div className={`p-8 rounded-3xl ${darkMode ? 'bg-neutral-900 border-neutral-800' : 'bg-white border-red-100 shadow-xl'} border relative space-y-4 flex flex-col justify-between group hover:border-red-500/50 transition-all`}>
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-600 to-teal-700 text-white flex items-center justify-center font-bold text-lg shadow-lg">
+                  02
+                </div>
+                <MessageSquare className="w-6 h-6 text-emerald-500" />
+              </div>
+              <h3 className={`font-serif font-bold text-xl ${darkMode ? 'text-white' : 'text-slate-900'}`}>
+                Check Date Availability
+              </h3>
+              <p className={`text-xs ${darkMode ? 'text-neutral-400' : 'text-slate-600'} leading-relaxed`}>
+                Click any "Book Now" or "Inquire" button on the website to connect instantly with {BRAND_INFO.owner} on WhatsApp with your preferred slot date.
+              </p>
+            </div>
+            <button
+              onClick={() => openBookingModal()}
+              className="pt-4 border-t border-red-500/10 text-xs font-bold text-emerald-600 hover:text-emerald-700 inline-flex items-center space-x-1"
+            >
+              <span>Instant WhatsApp Inquiry</span>
+              <ChevronRight className="w-3.5 h-3.5" />
+            </button>
+          </div>
+
+          {/* Step 3 */}
+          <div className={`p-8 rounded-3xl ${darkMode ? 'bg-neutral-900 border-neutral-800' : 'bg-white border-red-100 shadow-xl'} border relative space-y-4 flex flex-col justify-between group hover:border-red-500/50 transition-all`}>
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-600 text-white flex items-center justify-center font-bold text-lg shadow-lg">
+                  03
+                </div>
+                <CheckCircle2 className="w-6 h-6 text-amber-500" />
+              </div>
+              <h3 className={`font-serif font-bold text-xl ${darkMode ? 'text-white' : 'text-slate-900'}`}>
+                Lock In Deposit & Confirmation
+              </h3>
+              <p className={`text-xs ${darkMode ? 'text-neutral-400' : 'text-slate-600'} leading-relaxed`}>
+                Transfer your advance deposit via Online Bank Transfer, JazzCash, or EasyPaisa to secure your guaranteed venue date.
+              </p>
+            </div>
+            <div className="pt-4 border-t border-red-500/10 flex items-center justify-between">
+              <span className="text-[11px] font-bold text-amber-500">100% Guaranteed Spot</span>
+              <button
+                onClick={() => openBookingModal()}
+                className="px-3.5 py-1.5 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-red-600 to-rose-700 shadow-md"
+              >
+                Book Now
+              </button>
+            </div>
+          </div>
         </div>
       </section>
 

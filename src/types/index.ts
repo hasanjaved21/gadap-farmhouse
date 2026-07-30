@@ -74,7 +74,7 @@ export interface EventCategory {
 export interface GalleryItem {
   id: string;
   title: string;
-  category: 'Swimming Pool' | 'Farmhouses' | 'Gardens' | 'Rooms' | 'BBQ Area' | 'Night View' | 'Birthday Events' | 'Wedding Events' | 'Outdoor Dining' | 'Sports Activities' | 'Indoor Games' | 'Drone Shots';
+  category: 'Swimming Pool' | 'Farmhouses' | 'Gardens' | 'Rooms' | 'BBQ Area' | 'Night View' | 'Night Life' | 'Birthday Events' | 'Wedding Events' | 'Outdoor Dining' | 'Sports Activities' | 'Indoor Games' | 'Drone Shots';
   imageUrl: string;
   caption: string;
   farmhouseName?: string;

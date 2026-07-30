@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { X, Sparkles, Send, Bot, User, ArrowRight, RefreshCw, MessageSquare, Building2 } from 'lucide-react';
+import { X, Sparkles, Send, Bot, User, RefreshCw, MessageSquare, Building2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 interface Message {
@@ -16,13 +16,6 @@ interface AIAgentModalProps {
   darkMode?: boolean;
 }
 
-const INITIAL_PROMPTS = [
-  'Farmhouse for 50 guests with floodlit cricket pitch',
-  'Poolside villa with AC rooms for family weekend',
-  'Best venue for 300+ guests Wedding or Mehndi',
-  'Budget options with standby generator backup',
-];
-
 export const AIAgentModal: React.FC<AIAgentModalProps> = ({
   isOpen,
   onClose,
@@ -33,7 +26,7 @@ export const AIAgentModal: React.FC<AIAgentModalProps> = ({
     {
       id: 'welcome',
       role: 'assistant',
-      text: "Assalam-o-Alaikum! I am your AI Farmhouse Assistant for Gadap Town, Karachi. Tell me your group size, occasion, or preferred amenities, and I'll match you with the ideal luxury venue!",
+      text: 'Assalam-o-Alaikum! Welcome to Gadap Farmhouses AI. How can I assist you with your booking or venue inquiry today?',
       timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
     },
   ]);
@@ -67,7 +60,6 @@ export const AIAgentModal: React.FC<AIAgentModalProps> = ({
     setLoading(true);
 
     try {
-      // Build conversation history for context
       const history = messages
         .filter((m) => m.id !== 'welcome')
         .map((m) => ({
@@ -102,7 +94,7 @@ export const AIAgentModal: React.FC<AIAgentModalProps> = ({
         {
           id: (Date.now() + 1).toString(),
           role: 'assistant',
-          text: 'I am experiencing a temporary connection issue. Please feel free to call or WhatsApp us directly at +92 334 3705720!',
+          text: 'I am experiencing a temporary connection issue. Please call or WhatsApp us directly at +92 334 3705720!',
           timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
         },
       ]);
@@ -121,64 +113,32 @@ export const AIAgentModal: React.FC<AIAgentModalProps> = ({
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 15 }}
           transition={{ duration: 0.2, ease: 'easeOut' }}
-          className={`w-full max-w-2xl h-[90vh] max-h-[680px] rounded-3xl shadow-2xl overflow-hidden flex flex-col border ${
+          className={`w-full max-w-lg h-[80vh] max-h-[580px] rounded-3xl shadow-2xl overflow-hidden flex flex-col border ${
             darkMode ? 'bg-neutral-900 border-neutral-800 text-neutral-100' : 'bg-white border-red-100 text-slate-900'
           }`}
         >
           {/* Header */}
-          <div className="bg-gradient-to-r from-red-700 via-rose-800 to-red-900 p-4 sm:p-5 text-white flex items-center justify-between shadow-lg relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full blur-2xl pointer-events-none"></div>
-            <div className="flex items-center space-x-3.5 z-10">
-              <div className="w-11 h-11 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-amber-300 shadow-inner">
-                <Bot className="w-6 h-6 animate-pulse" />
+          <div className="bg-gradient-to-r from-red-700 via-rose-800 to-red-900 p-4 text-white flex items-center justify-between shadow-md">
+            <div className="flex items-center space-x-3">
+              <div className="w-10 h-10 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-amber-300">
+                <Bot className="w-5 h-5" />
               </div>
               <div>
-                <div className="flex items-center space-x-2">
-                  <h3 className="font-serif font-bold text-base sm:text-lg tracking-tight">Gadap AI Concierge</h3>
-                  <span className="inline-flex items-center space-x-1 px-2 py-0.5 rounded-full bg-amber-400/20 border border-amber-300/30 text-[10px] font-mono text-amber-200">
-                    <Sparkles className="w-3 h-3 text-amber-300" />
-                    <span>Gemini AI</span>
-                  </span>
-                </div>
-                <p className="text-xs text-red-200 font-light">Instant Farmhouse Recommendations & Venue Guidance</p>
+                <h3 className="font-serif font-bold text-base tracking-tight">Gadap Farmhouses AI</h3>
               </div>
             </div>
 
             <button
               onClick={onClose}
-              className="p-2 rounded-xl bg-white/10 hover:bg-white/20 text-white transition-all cursor-pointer z-10"
+              className="p-2 rounded-xl bg-white/10 hover:bg-white/20 text-white transition-all cursor-pointer"
               aria-label="Close Modal"
             >
               <X className="w-5 h-5" />
             </button>
           </div>
 
-          {/* Quick Suggestion Chips (Shown at top) */}
-          <div className={`p-3 border-b text-xs flex items-center space-x-2 overflow-x-auto no-scrollbar ${
-            darkMode ? 'bg-neutral-950/60 border-neutral-800' : 'bg-red-50/50 border-red-100'
-          }`}>
-            <span className="whitespace-nowrap text-red-700 font-bold flex items-center space-x-1 shrink-0">
-              <Sparkles className="w-3.5 h-3.5 text-red-600" />
-              <span>Ask AI:</span>
-            </span>
-            {INITIAL_PROMPTS.map((prompt, idx) => (
-              <button
-                key={idx}
-                onClick={() => handleSend(prompt)}
-                disabled={loading}
-                className={`whitespace-nowrap px-3 py-1.5 rounded-full border text-xs font-medium transition-all cursor-pointer shrink-0 ${
-                  darkMode
-                    ? 'bg-neutral-800 border-neutral-700 text-neutral-300 hover:border-red-500 hover:text-white'
-                    : 'bg-white border-red-200 text-slate-700 hover:border-red-500 hover:text-red-700 hover:bg-red-50 shadow-sm'
-                }`}
-              >
-                {prompt}
-              </button>
-            ))}
-          </div>
-
           {/* Messages Body */}
-          <div className="flex-1 p-4 sm:p-5 overflow-y-auto space-y-4">
+          <div className="flex-1 p-4 overflow-y-auto space-y-4">
             {messages.map((msg) => (
               <div
                 key={msg.id}
@@ -191,7 +151,7 @@ export const AIAgentModal: React.FC<AIAgentModalProps> = ({
                 )}
 
                 <div
-                  className={`max-w-[85%] rounded-2xl p-4 text-xs sm:text-sm leading-relaxed shadow-sm ${
+                  className={`max-w-[85%] rounded-2xl p-3.5 text-xs sm:text-sm leading-relaxed shadow-sm ${
                     msg.role === 'user'
                       ? 'bg-red-600 text-white rounded-tr-none'
                       : darkMode
@@ -249,12 +209,12 @@ export const AIAgentModal: React.FC<AIAgentModalProps> = ({
                   <Bot className="w-4 h-4 animate-spin" />
                 </div>
                 <div
-                  className={`rounded-2xl rounded-tl-none p-4 text-xs ${
+                  className={`rounded-2xl rounded-tl-none p-3.5 text-xs ${
                     darkMode ? 'bg-neutral-800 text-neutral-300' : 'bg-slate-100 text-slate-600'
                   } flex items-center space-x-2`}
                 >
                   <RefreshCw className="w-4 h-4 animate-spin text-red-600" />
-                  <span>AI Concierge is thinking & checking Gadap venues...</span>
+                  <span>Gadap Farmhouses AI is typing...</span>
                 </div>
               </div>
             )}
@@ -275,7 +235,7 @@ export const AIAgentModal: React.FC<AIAgentModalProps> = ({
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              placeholder="Ask AI: e.g. 'Farmhouse for 40 guests with cricket pitch & night pool'..."
+              placeholder="Ask Gadap Farmhouses AI..."
               disabled={loading}
               className={`flex-1 px-4 py-3 rounded-2xl text-xs sm:text-sm border focus:outline-none focus:ring-2 focus:ring-red-500 transition-all ${
                 darkMode

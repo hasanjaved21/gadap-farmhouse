@@ -42,6 +42,7 @@ import {
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { HomePage } from './pages/HomePage';
+import { AboutPage } from './pages/AboutPage';
 import { BookingModal } from './components/BookingModal';
 import { SEOModal } from './components/SEOModal';
 import { LightboxModal } from './components/LightboxModal';
@@ -74,8 +75,17 @@ export default function App() {
   const [faqSearch, setFaqSearch] = useState('');
 
   const openBookingModal = (farmhouseId?: string) => {
-    setPreselectedFarmhouseId(farmhouseId);
-    setBookingModalOpen(true);
+    let msg = 'Hi Hammad Ghaffar! I am reaching out from your website for a Gadap Farmhouse booking inquiry.';
+    if (farmhouseId) {
+      const fh = FARMHOUSES_DATA.find(f => f.id === farmhouseId || f.name === farmhouseId);
+      if (fh) {
+        msg = `Hi Hammad Ghaffar! I want to inquire about booking *${fh.name}* in Gadap Town. Please share available dates and pricing details.`;
+      } else {
+        msg = `Hi Hammad Ghaffar! I want to inquire about booking *${farmhouseId}* in Gadap Town. Please share available dates and pricing details.`;
+      }
+    }
+    const url = `https://wa.me/${BRAND_INFO.phoneClean}?text=${encodeURIComponent(msg)}`;
+    window.open(url, '_blank');
   };
 
   const handleTabChange = (tab: string) => {
@@ -178,12 +188,12 @@ export default function App() {
             {/* Category Filters */}
             <div className="flex flex-wrap justify-center gap-2">
               {[
-                { id: 'all', label: 'All 22+ Facilities' },
-                { id: 'water', label: 'Swimming Pools' },
-                { id: 'sports', label: 'Sports & Games' },
-                { id: 'comfort', label: 'Rooms & Lounges' },
-                { id: 'services', label: 'Power & Support' },
-                { id: 'events', label: 'Events & Bonfire' }
+                { id: 'all', label: 'All Signature Facilities' },
+                { id: 'water', label: 'Pools & Aqua Park' },
+                { id: 'sports', label: 'Cricket & Games' },
+                { id: 'comfort', label: 'Suites & Play' },
+                { id: 'services', label: 'BBQ & Gazebos' },
+                { id: 'events', label: 'Lawns & Nightlife' }
               ].map((cat) => (
                 <button
                   key={cat.id}
@@ -250,86 +260,13 @@ export default function App() {
           </div>
         )}
 
-        {/* EVENTS PAGE */}
-        {activeTab === 'events' && (
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
-            <div className="text-center space-y-4 max-w-3xl mx-auto">
-              <span className="text-xs font-bold text-amber-400 uppercase tracking-widest px-3.5 py-1.5 rounded-full bg-amber-950/60 border border-amber-500/30">
-                Memorable Gatherings
-              </span>
-              <h1 className="font-serif font-extrabold text-4xl sm:text-5xl text-white">
-                Event Hosting & Celebrations
-              </h1>
-              <p className="text-sm sm:text-base text-neutral-400 leading-relaxed">
-                Whether hosting 350+ guest grand weddings or intimate 20-person pool parties, Gadap Farmhouses provides tailored venues and event setups.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {EVENTS_DATA.map((evt) => (
-                <div
-                  key={evt.id}
-                  className="rounded-3xl bg-neutral-900 border border-neutral-800 hover:border-amber-500/40 overflow-hidden shadow-2xl transition-all duration-300 group flex flex-col justify-between"
-                >
-                  <div className="relative h-64 overflow-hidden">
-                    <img
-                      src={evt.image}
-                      alt={evt.title}
-                      referrerPolicy="no-referrer"
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/50 to-transparent"></div>
-
-                    <span className="absolute top-4 right-4 bg-amber-500 text-neutral-950 font-bold text-xs px-3 py-1.5 rounded-full shadow-lg">
-                      {evt.idealGuestCount}
-                    </span>
-
-                    <div className="absolute bottom-4 left-6 right-6">
-                      <h2 className="font-serif font-bold text-2xl text-white drop-shadow-md">
-                        {evt.title}
-                      </h2>
-                      <p className="text-xs text-amber-300 font-medium">
-                        {evt.subtitle}
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="p-6 space-y-4">
-                    <p className="text-xs text-neutral-300 leading-relaxed">
-                      {evt.fullDesc}
-                    </p>
-
-                    <div className="space-y-2">
-                      <span className="text-[10px] text-amber-400 font-bold uppercase tracking-wider block">Key Event Features:</span>
-                      <div className="grid grid-cols-2 gap-2">
-                        {evt.highlights.map((h, i) => (
-                          <div key={i} className="flex items-center space-x-1.5 text-xs text-neutral-300 bg-neutral-950 p-2 rounded-xl border border-neutral-800">
-                            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                            <span className="truncate">{h}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className="pt-2 border-t border-neutral-800 flex items-center justify-between">
-                      <div className="text-[11px] text-neutral-400">
-                        <span>Top Venues: </span>
-                        <strong className="text-amber-300">{evt.recommendedFarmhouses.join(', ')}</strong>
-                      </div>
-
-                      <button
-                        onClick={() => openBookingModal()}
-                        className="px-5 py-2.5 rounded-xl text-xs font-bold text-neutral-950 bg-gold-gradient hover:brightness-110 shadow-lg flex items-center space-x-1 shrink-0"
-                      >
-                        <CalendarCheck className="w-4 h-4" />
-                        <span>Reserve Event</span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+        {/* ABOUT US PAGE */}
+        {activeTab === 'about' && (
+          <AboutPage
+            setActiveTab={handleTabChange}
+            openBookingModal={openBookingModal}
+            darkMode={darkMode}
+          />
         )}
 
         {/* GALLERY PAGE */}
